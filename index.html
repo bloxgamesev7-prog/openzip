@@ -1,1 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenZip Explorer</title>
 
+<style>
+body{
+    margin:0;
+    background:#3a6ea5;
+    font-family:Tahoma, Arial, sans-serif;
+}
+
+.window{
+    width:1500px;
+    margin:8px auto;
+    background:#ece9d8;
+    border:1px solid #0a246a;
+}
+
+.titlebar{
+    height:50px;
+    background:linear-gradient(#2b7cff,#0046d5);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 12px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.title img{
+    width:32px;
+}
+
+.winbuttons{
+    display:flex;
+    gap:4px;
+}
+
+.winbuttons div{
+    width:36px;
+    height:36px;
+    background:#4f8fff;
+    border:1px solid #9ec4ff;
+    text-align:center;
+    line-height:36px;
+    font-weight:bold;
+}
+
+.menu{
+    background:#f3f0e0;
+    padding:10px 18px;
+    border-bottom:1px solid #b0b0b0;
+}
+
+.menu a{
+    color:black;
+    text-decoration:none;
+    margin-right:35px;
+    font-size:18px;
+}
+
+.main{
+    display:flex;
+}
+
+.sidebar{
+    width:380px;
+    background:linear-gradient(#8fb3ff,#5b87df);
+    padding:20px;
+}
+
+.box{
+    background:#eef2fb;
+    margin-bottom:22px;
+    border-radius:10px 10px 0 0;
+    overflow:hidden;
+}
+
+.boxhead{
+    background:linear-gradient(#1457d9,#0046c8);
+    color:white;
+    padding:12px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.boxcontent{
+    padding:16px;
+}
+
+.boxcontent p,
+.boxcontent li{
+    font-size:18px;
+}
+
+.content{
+    flex:1;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.header img{
+    width:140px;
+}
+
+h1{
+    color:#001ba8;
+    font-size:72px;
+    margin:0;
+}
+
+.tagline{
+    font-size:28px;
+}
+
+hr{
+    margin:30px 0;
+}
+
+.section-title{
+    color:#001ba8;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.overview{
+    font-size:22px;
+    max-width:900px;
+}
+
+.features li{
+    font-size:22px;
+    margin:8px 0;
+}
+
+.download{
+    width:700px;
+    border:2px solid #8fb3ff;
+    border-radius:12px;
+    background:#eef2fb;
+    padding:25px;
+    margin-top:30px;
+}
+
+.download h2{
+    color:#001ba8;
+    margin:0;
+}
+
+.download-button{
+    color:green;
+    font-size:28px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.status{
+    height:42px;
+    background:#f3f0e0;
+    border-top:1px solid #bdbdbd;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 15px;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="window">
+
+<div class="titlebar">
+    <div class="title">
+        <img src="logo.png" alt="logo">
+        OpenZip Explorer
+    </div>
+
+    <div class="winbuttons">
+        <div>—</div>
+        <div>□</div>
+        <div>✕</div>
+    </div>
+</div>
+
+<div class="menu">
+    <a href="#">File</a>
+    <a href="#">Edit</a>
+    <a href="#">View</a>
+    <a href="#">Tools</a>
+    <a href="#">Help</a>
+</div>
+
+<div class="main">
+
+<div class="sidebar">
+
+    <div class="box">
+        <div class="boxhead">About OpenZip Explorer</div>
+        <div class="boxcontent">
+            <img src="logo.png" width="90">
+            <p>
+                OpenZip Explorer is a lightweight ZIP archive manager with a simple and easy to use interface.
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="boxhead">Tasks</div>
+        <div class="boxcontent">
+            <p>🏠 Visit Homepage</p>
+            <p>🌍 Check for Updates</p>
+            <p>📖 View Documentation</p>
+            <p>✉ Contact Support</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="boxhead">Information</div>
+        <div class="boxcontent">
+            <p>Version: 1.0.0</p>
+            <p>License: Freeware</p>
+            <p>Platform: Windows XP and later</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="content">
+
+    <div class="header">
+        <img src="logo.png" alt="logo">
+
+        <div>
+            <h1>OpenZip Explorer</h1>
+            <div class="tagline">
+                The simple way to explore ZIP archives.
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-title">Overview</div>
+
+    <p class="overview">
+        OpenZip Explorer allows you to open, browse and extract ZIP files quickly and easily.
+        With its familiar interface, managing compressed files has never been simpler.
+    </p>
+
+    <div class="section-title">Features</div>
+
+    <ul class="features">
+        <li>Open and browse ZIP archives</li>
+        <li>Extract files and folders</li>
+        <li>Lightweight and fast</li>
+        <li>User-friendly interface</li>
+        <li>Supports Windows XP and later</li>
+    </ul>
+
+    <div class="download">
+        <h2>Download OpenZip Explorer 1.0</h2>
+
+        <p>
+            Click below to download the latest version.
+        </p>
+
+        <a class="download-button"
+           href="https://github.com/YOUR_USERNAME/OpenZipExplorer/releases/latest">
+           Download Now
+        </a>
+    </div>
+
+</div>
+
+</div>
+
+<div class="status">
+    <span>Ready</span>
+    <span>OpenZip Explorer 1.0</span>
+</div>
+
+</div>
+
+</body>
+</html>
