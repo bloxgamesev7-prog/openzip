@@ -12,13 +12,16 @@ body{
     font-family:Tahoma, Arial, sans-serif;
 }
 
+/* MAIN WINDOW */
 .window{
-    width:1500px;
-    margin:8px auto;
+    width:95%;
+    max-width:1500px;
+    margin:10px auto;
     background:#ece9d8;
     border:1px solid #0a246a;
 }
 
+/* TITLE BAR */
 .titlebar{
     height:50px;
     background:linear-gradient(#2b7cff,#0046d5);
@@ -28,153 +31,117 @@ body{
     align-items:center;
     padding:0 12px;
     font-weight:bold;
-    font-size:20px;
+    font-size:18px;
 }
 
-.title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.winbuttons{
-    display:flex;
-    gap:4px;
-}
-
-.winbuttons div{
-    width:36px;
-    height:36px;
-    background:#4f8fff;
-    border:1px solid #9ec4ff;
-    text-align:center;
-    line-height:36px;
-    font-weight:bold;
-}
-
+/* MENU */
 .menu{
     background:#f3f0e0;
-    padding:10px 18px;
+    padding:8px 12px;
     border-bottom:1px solid #b0b0b0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .menu a{
     color:black;
     text-decoration:none;
-    margin-right:35px;
-    font-size:18px;
+    font-size:16px;
 }
 
+/* LAYOUT */
 .main{
     display:flex;
 }
 
+/* SIDEBAR */
 .sidebar{
-    width:380px;
+    width:320px;
     background:linear-gradient(#8fb3ff,#5b87df);
-    padding:20px;
+    padding:15px;
 }
 
+/* BOX */
 .box{
     background:#eef2fb;
-    margin-bottom:22px;
-    border-radius:10px 10px 0 0;
+    margin-bottom:15px;
+    border-radius:10px;
     overflow:hidden;
 }
 
 .boxhead{
     background:linear-gradient(#1457d9,#0046c8);
     color:white;
-    padding:12px;
-    font-size:18px;
+    padding:10px;
+    font-size:16px;
     font-weight:bold;
 }
 
 .boxcontent{
-    padding:16px;
+    padding:12px;
+    font-size:16px;
 }
 
-.boxcontent p{
-    font-size:18px;
-}
-
+/* CONTENT */
 .content{
     flex:1;
     background:#f4f4f4;
-    padding:40px;
+    padding:25px;
 }
 
 h1{
     color:#001ba8;
-    font-size:72px;
+    font-size:48px;
     margin:0;
 }
 
 .tagline{
-    font-size:28px;
+    font-size:22px;
 }
 
+/* SECTIONS */
 .section-title{
     color:#001ba8;
-    font-size:32px;
+    font-size:26px;
     font-weight:bold;
-    margin-top:30px;
+    margin-top:25px;
 }
 
 .overview{
-    font-size:22px;
+    font-size:18px;
     max-width:900px;
 }
 
 .features li{
-    font-size:22px;
-    margin:8px 0;
+    font-size:18px;
+    margin:6px 0;
 }
 
-/* SCAN BOX */
-.scan-box{
-    width:700px;
+/* DOWNLOAD */
+.download{
+    width:100%;
+    max-width:700px;
     border:2px solid #8fb3ff;
     border-radius:12px;
     background:#eef2fb;
-    padding:25px;
-    margin-top:30px;
-}
-
-.scan-bar{
-    width:100%;
-    height:25px;
-    background:#ccc;
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:10px;
-}
-
-.scan-fill{
-    height:100%;
-    width:0%;
-    background:green;
-    animation:scan 5s infinite;
-}
-
-@keyframes scan{
-    0%{width:0%}
-    50%{width:100%}
-    100%{width:0%}
+    padding:20px;
+    margin-top:25px;
 }
 
 .download-button{
     display:inline-block;
     margin-top:10px;
-    padding:12px 20px;
+    padding:12px 18px;
     background:green;
     color:white;
-    font-size:24px;
+    font-size:20px;
     font-weight:bold;
     text-decoration:none;
     border-radius:8px;
 }
 
+/* STATUS */
 .status{
     height:42px;
     background:#f3f0e0;
@@ -182,8 +149,40 @@ h1{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 15px;
-    font-size:18px;
+    padding:0 10px;
+    font-size:14px;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px){
+
+    .main{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .tagline{
+        font-size:18px;
+    }
+
+    .content{
+        padding:15px;
+    }
+
+    .menu a{
+        font-size:14px;
+    }
+
+    .status{
+        font-size:12px;
+    }
 }
 </style>
 </head>
@@ -193,15 +192,7 @@ h1{
 <div class="window">
 
 <div class="titlebar">
-    <div class="title">
-        OpenZip Explorer
-    </div>
-
-    <div class="winbuttons">
-        <div>—</div>
-        <div>□</div>
-        <div>✕</div>
-    </div>
+    OpenZip Explorer
 </div>
 
 <div class="menu">
@@ -245,23 +236,8 @@ h1{
         <li>Fast and lightweight</li>
     </ul>
 
-    <!-- HARD DISK SCAN -->
-    <div class="scan-box">
-        <h2>Scanning Hard Disk...</h2>
-        <p>Analyzing storage space and data usage</p>
-
-        <div class="scan-bar">
-            <div class="scan-fill"></div>
-        </div>
-
-        <p><b>Detected Storage:</b> 512 GB</p>
-        <p><b>Used Data:</b> 287 GB</p>
-        <p><b>Free Space:</b> 225 GB</p>
-    </div>
-
-    <div class="scan-box">
+    <div class="download">
         <h2>Download OpenZip Explorer 1.0</h2>
-        <p>Click below to download the latest version.</p>
 
         <a class="download-button"
            href="OpenZipExplorer_Setup.exe"
